@@ -1,0 +1,88 @@
+@import url("file:///home/miyazaki/.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "Iosevka Nerd Font Propo";
+    font-size: 14px;
+}
+
+/* Waybar background */
+window#waybar {
+    background: transparent;
+}
+
+/* Module groups */
+window#waybar .modules-left,
+window#waybar .modules-center,
+window#waybar .modules-right {
+    background: alpha(@background, 0.75);
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid alpha(@color4, 0.7);
+    color: @foreground;
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 0 6px;
+    margin: 2px;
+    border-radius: 6px;
+    background: transparent;
+    color: @foreground;
+    border: none;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+    background: alpha(@color4, 0.6);
+    color: @background;
+}
+
+#workspaces button:hover {
+    background: alpha(@color5, 0.35);
+}
+
+/* Module spacing */
+#workspaces,
+#cpu,
+#memory,
+#temperature,
+#pulseaudio,
+#network,
+#bluetooth,
+#custom-mpd,
+#clock,
+#tray {
+    margin: 0 6px;
+    color: @foreground;
+}
+
+/* Optional accents for specific modules */
+
+
+#network {
+    color: @color4;
+}
+
+#pulseaudio {
+    color: @color2;
+}
+
+#bluetooth {
+    color: @color6;
+}
+
+#clock {
+    color: @color5;
+}
+
+/* MPD module */
+#custom-mpd {
+    color: @foreground;
+}
+
+
+#cava {
+    margin: 0 12px;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
